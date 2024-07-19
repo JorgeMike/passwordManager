@@ -1,38 +1,7 @@
-<p align="center"><img src="https://i.imgur.com/NZfsD1p.png"></p>
+# Password Manager
 
-## Usage
+Este es un sencillo gestor de contraseñas que permite generar contraseñas seguras para diversas cuentas de redes sociales y servicios de correo electrónico.
 
-### Create an App
+## Captura de Pantalla
 
-```
-# with npx
-$ npx create-nextron-app my-app --example basic-lang-typescript
-
-# with yarn
-$ yarn create nextron-app my-app --example basic-lang-typescript
-
-# with pnpm
-$ pnpm dlx create-nextron-app my-app --example basic-lang-typescript
-```
-
-### Install Dependencies
-
-```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
-
-### Use it
-
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+![Password Manager Screenshot](resources/system.png)
