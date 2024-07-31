@@ -14,10 +14,10 @@ const GeneratedPasswordDisplay = ({ generatedPassword }) => {
     generatedPassword && (
       <div
         className="mt-4 bg-secondary rounded-3 p-2 text-center shadow py-3"
-        style={{ width: "300px" }}
+        style={{ minWidth: "300px" }}
       >
         <h6>Generated Password:</h6>
-        <p className="d-flex justify-content-center align-items-center m-0 gap-2">
+        <p className="d-flex justify-content-center align-items-center mx-1 my-0 gap-2">
           {generatedPassword}{" "}
           <CopyToClipboard text={generatedPassword} onCopy={handleCopy}>
             <button className="border-0 p-0 m-0 py-2 px-2 rounded align-items-center justify-content-center d-flex bg-primary">
