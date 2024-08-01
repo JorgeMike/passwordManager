@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { FaRegClipboard } from "react-icons/fa";
+import { FaRegClipboard, FaSave } from "react-icons/fa";
 
-const GeneratedPasswordDisplay = ({ generatedPassword }) => {
+interface GeneratedPasswordDisplayProps {
+  generatedPassword: string;
+  onSaved?: () => void;
+}
+
+const GeneratedPasswordDisplay = ({
+  generatedPassword,
+  onSaved,
+}: GeneratedPasswordDisplayProps) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

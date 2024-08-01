@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import socialNetworks from "../../../utils/socialNetworks.json";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import useBootstrap from "../../../hooks/useBootstrap";
+import Input from "../../Inputs/Input";
 
 export default function MediumGenerator() {
   useBootstrap();
@@ -75,31 +76,21 @@ export default function MediumGenerator() {
             <FaRegQuestionCircle className="text-primary" />
           </span>
         </h5>
-        <div className="form-floating mb-3">
-          <input
-            type="text"
-            className="form-control"
-            id="passwordLength"
-            placeholder="12"
-            value={passwordLength === 0 ? "" : passwordLength}
-            onChange={handleChangedPasswordLength}
-            required
-          />
-          <label htmlFor="passwordLength">Password length</label>
-        </div>
+        <Input
+          type="text"
+          id="passwordLength"
+          label="Password length"
+          value={passwordLength === 0 ? "" : passwordLength}
+          onChange={handleChangedPasswordLength}
+        />
 
-        <div className="form-floating mb-3">
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="name@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <label htmlFor="email">Email</label>
-        </div>
+        <Input
+          type="email"
+          id="email"
+          label="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
         <div className="form-floating mb-3">
           <select
@@ -119,17 +110,14 @@ export default function MediumGenerator() {
           <label htmlFor="floatingSelect">Social Network</label>
         </div>
 
-        <div className="form-floating mb-3">
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label htmlFor="password">Password</label>
-        </div>
+        <Input
+          type="password"
+          id="password"
+          label="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        
         <button type="submit" className="btn btn-primary w-100 text-white">
           Generate Password
         </button>

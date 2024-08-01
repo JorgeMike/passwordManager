@@ -4,6 +4,7 @@ import crypto from "crypto";
 import GeneratedPasswordDisplay from "../../GeneratedPasswordDisplay/GeneratedPasswordDisplay";
 import useBootstrap from "../../../hooks/useBootstrap";
 import { FaRegQuestionCircle } from "react-icons/fa";
+import Input from "../../Inputs/Input";
 
 export default function SimpleGenerator() {
   useBootstrap();
@@ -44,30 +45,21 @@ export default function SimpleGenerator() {
             <FaRegQuestionCircle className="text-primary" />
           </span>
         </h5>
-        <div className="form-floating mb-3">
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="name@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <label htmlFor="email">Email</label>
-        </div>
+        <Input
+          type="email"
+          id="email"
+          label="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          id="password"
+          label="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        <div className="form-floating mb-3">
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <label htmlFor="password">Password</label>
-        </div>
         <button type="submit" className="btn btn-primary w-100 text-white">
           Generate Password
         </button>

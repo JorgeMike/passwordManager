@@ -1,5 +1,9 @@
 [
   {
+    "id": "gmail",
+    "name": "Gmail"
+  },
+  {
     "id": "facebook",
     "name": "Facebook"
   },

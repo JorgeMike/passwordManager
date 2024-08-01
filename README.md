@@ -65,3 +65,11 @@ Para iniciar la aplicación, ejecuta:
    - Selecciona la codificación (Base64, Hex, Binary).
    - Ingresa tu correo electrónico y una contraseña maestra.
    - 🚧 En desarrollo 🚧
+
+# Update
+
+![Advanced Generator](./resources/readme/advanced2.png)
+
+![Advanced Generator](./resources/readme/modalAdditionalData.png)
+
+![Advanced Generator](./resources/readme/modalSaveconfig.png)
