@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AdditionalData } from "../PasswordsGenerators/Advanced/AdvancedGenerator";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -19,6 +19,12 @@ export default function SaveConfiguration({
   const [configName, setConfigName] = useState("");
   const [description, setDescription] = useState("");
 
+  useEffect(() => {
+    window.ipc.on("insert-configuration", (event, arg) => {
+      console.log("ARGS", event);
+    });
+  }, []);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (configName.trim() === "") {
@@ -36,9 +42,7 @@ export default function SaveConfiguration({
       additionalData,
     };
 
-    console.log(configuration);
-
-    console.log("Save configuration");
+    window.ipc.send("insert-configuration", configuration);
   };
 
   return (

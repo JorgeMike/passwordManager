@@ -19,19 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en" data-bs-theme="dark">
       <body className={inter.className}>
-        <div
-          style={{
-            minHeight: "100vh",
-          }}
-          className="d-flex flex-column"
-        >
-          <Providers>
-            <div className="d-flex flex-column justify-content-center align-items-center mt-3">
-              <Pills />
-            </div>
+        <Providers>
+          {" "}
+          <div
+            style={{
+              minHeight: "100vh",
+            }}
+            className="d-flex flex-column"
+          >
             {children}
-          </Providers>
-        </div>
+          </div>
+        </Providers>
       </body>
     </html>
   );

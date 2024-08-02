@@ -32,14 +32,14 @@ export default function Pills() {
         ))}
       </ul>
       <Link
-        href={"/"}
+        href={"/login"}
         className="btn btn-primary d-flex align-items-center justify-content-center  text-white border rounded-circle"
         style={{
           width: "45px",
           height: "45px",
         }}
       >
-        <FaUser size={20}/>
+        <FaUser size={20} />
       </Link>
     </nav>
   );

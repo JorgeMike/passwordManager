@@ -4,7 +4,6 @@ import crypto, { BinaryToTextEncoding } from "crypto";
 import { FaRegQuestionCircle, FaTrash } from "react-icons/fa";
 import GeneratedPasswordDisplay from "../../GeneratedPasswordDisplay/GeneratedPasswordDisplay";
 import toast from "react-hot-toast";
-import socialNetworks from "../../../utils/socialNetworks.json";
 import Modal from "../../Modals/Modal";
 import AditionalDataModal from "../../Modals/AditionalDataModal";
 import Input from "../../Inputs/Input";
@@ -117,7 +116,7 @@ export default function AdvancedGenerator() {
             data-bs-toggle="popover"
             data-bs-trigger="hover focus"
             data-bs-title="About Advanced Generator"
-            data-bs-content="This generator creates a password hash by combining the entered email and password. The default password length is 16 characters, ensuring a high level of security."
+            data-bs-content="This generator is more secure than the simple generator, it uses a hash function to generate the password"
           >
             <FaRegQuestionCircle className="text-primary" />
           </span>
